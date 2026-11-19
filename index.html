@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Instruments Finder</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 400px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h2 {
+      margin: 0;
+      color: #333333;
+    }
+    header p {
+      color: #666666;
+    }
+    .content label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .content input {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+    .hint {
+      font-size: 0.9em;
+      color: #555555;
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #cf8c0f;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff8800;
+    }
+    .result {
+      margin-top: 20px;
+    }
+    .result h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <h2>Weather Instruments Finder</h2>
+      <p>Explore the instruments used to observe weather conditions!</p>
+    </header>
+
+    <div class="content">
+      <label for="instrument"><strong>Enter Weather Instrument Name:</strong></label>
+      <input id="instrument" type="text" value="Thermometer" />
+      <div class="hint">
+        Try: Thermometer, Barometer, Anemometer, Hygrometer, Rain Gauge, Wind Vane, Weather Balloon, or Pyranometer.
+      </div>
+
+      <button id="search-btn" py-click="find_instrument">SEARCH INSTRUMENT</button>
+
+      <div class="result">
+        <h3>Instrument Information</h3>
+        <p><strong>Weather Instrument Name:</strong> <span id="name">Thermometer</span></p>
+        <p><strong>Measures:</strong> <span id="measures">Air Temperature</span></p>
+        <p><strong>Unit of Measurement:</strong> <span id="unit">Degrees Celsius (°C)</span></p>
+        <p><strong>Purpose:</strong> <span id="purpose">Measures how hot or cold the air is.</span></p>
+      </div>
+    </div>
+ 
+  </div>
+
+  <script type="py" src="./main.py"></script>
+</body>
+</html>
